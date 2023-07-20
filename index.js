@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import fs from "node:fs/promises";
 import { cwd } from "node:process";
 import path from "node:path";
