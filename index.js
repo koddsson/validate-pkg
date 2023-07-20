@@ -3,6 +3,7 @@
 import fs from "node:fs/promises";
 import { cwd } from "node:process";
 import path from "node:path";
+import { exit } from "node:process";
 import assert from "node:assert";
 
 import sortPackageJson from "sort-package-json";
@@ -52,9 +53,9 @@ const rules = [
 
 const violations = await Promise.allSettled(rules.map((rule) => rule(json)));
 
-console.log(
-  violations
-    .map((x) => x.reason?.message)
-    .filter(Boolean)
-    .join("\n")
-);
+const errors = violations.map((x) => x.reason?.message).filter(Boolean);
+
+if (errors.length) {
+  console.error(errors.join("\n"));
+  error(1);
+}
