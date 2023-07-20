@@ -57,5 +57,5 @@ const errors = violations.map((x) => x.reason?.message).filter(Boolean);
 
 if (errors.length) {
   console.error(errors.join("\n"));
-  error(1);
+  exit(1);
 }
