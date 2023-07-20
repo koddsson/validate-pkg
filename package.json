@@ -1,6 +1,6 @@
 {
   "name": "@koddsson/validate-pkg",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "type": "module",
   "bin": "./index.js",
