@@ -20,9 +20,6 @@ const content = await fs.readFile(path.join(cwd(), "package.json"));
 const json = JSON.parse(content);
 
 const rules = [
-  async function log(json) {
-    console.log(json);
-  },
   async function metadata(json) {
     assert.ok(json.name, "Expected a name");
     assert.ok(json.version, "Expected a version");
