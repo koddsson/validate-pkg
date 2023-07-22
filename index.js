@@ -8,12 +8,12 @@ import assert from "node:assert";
 
 import sortPackageJson from "sort-package-json";
 
-const DEBUG = !!env.DEBUG
+const DEBUG = !!env.DEBUG;
 
 if (DEBUG) {
   console.log(cwd());
   console.log(path.join(cwd(), "package.json"));
-  console.log('---');
+  console.log("---");
 }
 
 const content = await fs.readFile(path.join(cwd(), "package.json"));
