@@ -26,7 +26,11 @@ const rules = [
     assert.ok(json.keywords, "Expected keywords");
     assert.notDeepStrictEqual(json.keywords, [], "Expected keywords");
     assert.ok(json.description, "Expected a description");
-    assert.equal(json.author, "Kristján Oddsson <hi@koddsson.com>");
+    assert.equal(
+      json.author,
+      "Kristján Oddsson <hi@koddsson.com>",
+      `Expected "author" to be "Kristján Oddsson <hi@koddsson.com>"`
+    );
   },
   async function tooling(json) {
     assert.ok(json.scripts, "expected scripts");
