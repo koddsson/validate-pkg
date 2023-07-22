@@ -8,7 +8,7 @@ import assert from "node:assert";
 
 import sortPackageJson from "sort-package-json";
 
-const content = await fs.readFile(path.join(cwd(), "./package.json"));
+const content = await fs.readFile(path.join(cwd(), "package.json"));
 const json = JSON.parse(content);
 
 const rules = [
